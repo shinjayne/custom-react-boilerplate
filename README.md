@@ -1,24 +1,28 @@
-#React-study 
+# React-study 
 ## purpose of this project
 Not using a big react boilerplate, implement routing, web serving, redux-pattern, etc by myself based on `start-react-app`
 ## change log
 
 - 2018-02-28 : first start of this project with `start-react-app` package
 - 2018-03-01 : applied `react-router-dom`
-- 2018-03-05 : implement server using `express`
+- 2018-03-07 : code splitting
+- 2018-xx-xx (plan) : with `redux`  & `react-redux` binding 
+- 2018-xx-xx (plan) : with `redux-saga` (redux middleware who manage side-effects)
+
  
-### first start
-####
+### 2018-02-28 : first start of this project with `start-react-app` package
+
+#### install 
 ```$xslt
 npm install -g create-react-app
 create-react-app myapp 
 cd ./myapp
 ```
-####
+#### `webpack-dev-server` activate
 ```$xslt
 npm start
 ```
-#### 
+#### compile with `webpack` and `babel` 
 ```
 npm build 
 ```
@@ -28,7 +32,7 @@ npm install -g serve
 serve -s ./build
 ```
 
-### applied `react-router-dom`
+### 2018-03-01 : applied `react-router-dom`
 #### reference
 - https://velopert.com/3417
 - https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
@@ -65,6 +69,38 @@ For browser based project, there are two types of router, `<BrowserRouter>` and 
 When you can handle dynamic request with application server, it is always recommended to use `<BrouserRouter>`.
 
 If you have the server which can only serve static files, then you may use `<HashRouter>`.
+
+### 2018-03-07 : code splitting
+
+### 2018-xx-xx (plan) : with `redux`  & `react-redux` binding
+
+`redux` is state managing library. We can use  `redux` with react by using `react-redux` package.
+
+#### reference
+- https://deminoth.github.io/redux/
+
+#### required package
+- immutable
+- redux
+- react-redux 
+- redux-immutable
+#### about immutable
+##### why using immutable (with redux) ? 
+- https://deminoth.github.io/redux/recipes/UsingImmutableJS.html
+
+##### how to use immutable
+- `immutable` official doc : https://facebook.github.io/immutable-js/ 
+- `redux-immutable` gitgub doc : https://github.com/gajus/redux-immutable
+
+### 2018-xx-xx (plan) : with `redux-saga` (redux middleware who manage side-effects)
+
+#### reference
+- https://redux-saga.js.org
+- http://meetup.toast.com/posts/136
+
+
+
+
 
 
 
