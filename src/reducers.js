@@ -1,17 +1,13 @@
 import {fromJS} from 'immutable';
 import {combineReducers} from 'redux-immutable';
 
-// global setting state
-const globalInitialState = fromJS(
-    {
-        theme_white : true,
-    }
-);
-// Reducer for global setting state
-function globalReducer(state = globalInitialState, action){
-    switch (action.type) {
-        case 
-    }
+import globalReducer from './containers/App/reducers';
+
+
+export default function createCombinedReducer(){
+    return combineReducers({
+        global : globalReducer,
+    })
 }
 
 

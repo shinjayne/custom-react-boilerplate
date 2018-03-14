@@ -8,10 +8,10 @@ import {Provider} from 'react-redux';
 
 
 import App from './containers/App/index';
-import totalReducer from './reducers';
+import createCombinedReducer from './reducers';
 
 
-let store = createStore(totalReducer);
+let store = createStore(createCombinedReducer(), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const Root = () => (
     <BrowserRouter>

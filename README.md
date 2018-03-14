@@ -5,9 +5,14 @@ Not using a big react boilerplate, implement routing, web serving, redux-pattern
 
 - 2018-02-28 : first start of this project with `start-react-app` package
 - 2018-03-01 : applied `react-router-dom`
-- 2018-03-07 : code splitting
-- 2018-xx-xx (plan) : with `redux`  & `react-redux` binding 
-- 2018-xx-xx (plan) : with `redux-saga` (redux middleware who manage side-effects)
+- 2018-03-14 : `redux` /`react-redux`  and `immutable`
+- 2018-03-14 : use `prop-types` to type checking  
+
+
+#### on plan ... 
+- 2018-xx-xx :  `redux-saga` (redux middleware who manage side-effects)
+- 2018-xx-xx : code splitting 
+- 2018-xx-xx : with `redux-saga` (redux middleware who manage side-effects)
 
  
 ### 2018-02-28 : first start of this project with `start-react-app` package
@@ -70,9 +75,8 @@ When you can handle dynamic request with application server, it is always recomm
 
 If you have the server which can only serve static files, then you may use `<HashRouter>`.
 
-### 2018-03-07 : code splitting
 
-### 2018-xx-xx (plan) : with `redux`  & `react-redux` binding
+### 2018-03-14  : `redux` /`react-redux`  and `immutable`  
 
 `redux` is state managing library. We can use  `redux` with react by using `react-redux` package.
 
@@ -92,16 +96,35 @@ If you have the server which can only serve static files, then you may use `<Has
 - `immutable` official doc : https://facebook.github.io/immutable-js/ 
 - `redux-immutable` gitgub doc : https://github.com/gajus/redux-immutable
 
-### 2018-xx-xx (plan) : with `redux-saga` (redux middleware who manage side-effects)
+
+### 2018-03-14 : use `prop-types` to type checking 
+
+#### reference
+- npm info : https://www.npmjs.com/package/prop-types 
+- react doc : https://reactjs.org/docs/typechecking-with-proptypes.html
+
+#### install 
+```angular2html
+npm install --save prop-types 
+```
+#### use 
+```angular2html
+import PropTypes from 'prop-types'; // ES6
+var PropTypes = require('prop-types'); // ES5 with npm
+```
+
+
+
+
+
+
+
+
+### 2018-xx-xx (plan) :  `redux-saga` (redux middleware who manage side-effects)
 
 #### reference
 - https://redux-saga.js.org
 - http://meetup.toast.com/posts/136
-
-
-
-
-
 
 
 ### implement server using `express`
