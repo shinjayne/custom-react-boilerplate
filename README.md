@@ -1,12 +1,17 @@
-# React-study 
+# Custom React Boilerplate by Jayne 
 ## purpose of this project
-Not using a big react boilerplate, implement routing, web serving, redux-pattern, etc by myself based on `start-react-app`
+Not using a big react boilerplate, implement routing, web serving, redux-pattern, code-splitting, etc by myself based on `start-react-app`
+
+inspired by [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
+
+continuously adding new features and packages 
 ## change log
 
 - 2018-02-28 : first start of this project with `start-react-app` package
-- 2018-03-01 : applied `react-router-dom`
+- 2018-03-01 :  `react-router` / `react-router-dom`
 - 2018-03-14 : `redux` /`react-redux`  and `immutable`
-- 2018-03-14 : use `prop-types` to type checking  
+- 2018-03-14 : use `prop-types` for type checking  
+- 2018-03-14 : use `react-loadable` for simple code-splitting
 
 
 #### on plan ... 
@@ -97,7 +102,7 @@ If you have the server which can only serve static files, then you may use `<Has
 - `redux-immutable` gitgub doc : https://github.com/gajus/redux-immutable
 
 
-### 2018-03-14 : use `prop-types` to type checking 
+### 2018-03-14 : use `prop-types` for type checking
 
 #### reference
 - npm info : https://www.npmjs.com/package/prop-types 
@@ -113,10 +118,37 @@ import PropTypes from 'prop-types'; // ES6
 var PropTypes = require('prop-types'); // ES5 with npm
 ```
 
+### 2018-03-14 : use `react-loadable` for simple code-splitting
 
+`react-loadable` is a yarn package to make code-splitting super simple 
 
+#### reference
+- https://github.com/jamiebuilds/react-loadable
 
+#### install in CLI
+```angular2html
+yarn add react-loadable
+```
 
+#### code explaination
+This package make you available to do component-based code splitting.
+The only thing you have to do is wrap your component (especially container component) with Loadable, like the code below.  
+
+```angular2html
+import Loadable from 'react-loadable';
+import Loading from './my-loading-component';
+
+const LoadableComponent = Loadable({
+  loader: () => import('./my-component'),
+  loading: Loading,
+});
+
+export default class App extends React.Component {
+  render() {
+    return <LoadableComponent/>;
+  }
+}
+```
 
 
 

@@ -1,5 +1,5 @@
 import {fromJS} from 'immutable';
-import {combineReducers} from 'redux-immutable';
+
 
 import {CHANGE_THEME_BLACK, CHANGE_THEME_WHITE} from './consts';
 
