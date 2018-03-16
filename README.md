@@ -12,12 +12,11 @@ continuously adding new features and packages
 - 2018-03-14 : `redux` /`react-redux`  and `immutable`
 - 2018-03-14 : use `prop-types` for type checking  
 - 2018-03-14 : use `react-loadable` for simple code-splitting
+- 2018-03-15 : use `reselect` for constructing structured selector
 
 
 #### on plan ... 
-- 2018-xx-xx :  `redux-saga` (redux middleware who manage side-effects)
-- 2018-xx-xx : code splitting 
-- 2018-xx-xx : with `redux-saga` (redux middleware who manage side-effects)
+- 2018-xx-xx :  `redux-saga` (redux middleware who manage side-effects) 
 
  
 ### 2018-02-28 : first start of this project with `start-react-app` package
@@ -150,8 +149,57 @@ export default class App extends React.Component {
 }
 ```
 
+### - 2018-03-15 : use `reselect` for constructing structured selector
 
+#### reference 
+- github doc : https://github.com/reactjs/reselect
 
+#### installation 
+```angular2html
+npm install --save reselect
+```
+
+#### major function 1 `createSelector`
+
+1. easily wrap a selector and make more specific selector
+```angular2html
+const getTodo = (state)=> state.get(todo) ;
+
+const getFilter = createSelector(
+    getTodo,
+    (todo)=>todo.filter
+);
+```
+2. easily wrap two or more selectors and make some new selection
+```angular2html
+const getFilteredList = createSelector(
+    [getList, getFilter],
+    (list, filter)=> {
+        switch(filter) {
+            case 'ALL' :
+                return list;
+            default :
+                return list;
+        }
+    }
+) ;
+```
+
+#### major function 2 `createStructuredSelector`
+
+make final composed selector 
+
+```angular2html
+const selector = createStructuredSelector({
+        filteredList: getFilteredList,
+    });
+
+//same code 
+const selector = createSelector(
+    getFilteredList,
+    (result) => {filteredList : result }
+);
+```
 ### 2018-xx-xx (plan) :  `redux-saga` (redux middleware who manage side-effects)
 
 #### reference
