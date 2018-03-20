@@ -1,4 +1,7 @@
 # Custom React Boilerplate by Jayne 
+
+![](./header.png)
+
 ## purpose of this project
 Not using a big react boilerplate, implement routing, web serving, redux-pattern, code-splitting, etc by myself based on `start-react-app`
 
@@ -7,7 +10,7 @@ inspired by [react-boilerplate](https://github.com/react-boilerplate/react-boile
 continuously adding new features and packages 
 ## change log
 
-- 2018-02-28 : first start of this project with `start-react-app` package
+- 2018-02-28 : first start of this project with `start-react-app` package   
 - 2018-03-01 :  `react-router` / `react-router-dom`
 - 2018-03-14 : `redux` /`react-redux`  and `immutable`
 - 2018-03-14 : use `prop-types` for type checking  
@@ -17,6 +20,8 @@ continuously adding new features and packages
 
 #### on plan ... 
 - 2018-xx-xx :  `redux-saga` (redux middleware who manage side-effects) 
+- 2018-xx-xx : `styled-component`
+- 2018-xx-xx : [`react-injectable-reducer`](https://www.npmjs.com/package/redux-injectable-reducer)
 
  
 ### 2018-02-28 : first start of this project with `start-react-app` package
